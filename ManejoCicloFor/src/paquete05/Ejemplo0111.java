@@ -20,6 +20,7 @@ public class Ejemplo0111 {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         int numdetablas;
+        int inicioTa = 1;
         int limite;
         int contador = 1;
 
@@ -27,15 +28,16 @@ public class Ejemplo0111 {
         numdetablas = entrada.nextInt();
         System.out.println("Ingrese un limite");
         limite = entrada.nextInt();
-        while (numdetablas <= limite) {
+        while (inicioTa <= numdetablas) {
 
-            while (contador <= numdetablas) {
-                contador = contador + 1;
-                System.out.println(numdetablas + "*" + contador + "="
-                        +numdetablas*contador);
+            while (contador <= limite) {
+                System.out.println(inicioTa + "*" + contador + "="
+                        +inicioTa*contador);
             contador = contador + 1;
 
             }
+           contador = 1;
+           inicioTa = inicioTa + 1;
         }
 
     }
