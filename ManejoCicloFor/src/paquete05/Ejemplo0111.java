@@ -5,6 +5,7 @@
  */
 package paquete05;
 
+import java.util.Scanner;
 import paquete01.*;
 
 /**
@@ -17,19 +18,25 @@ public class Ejemplo0111 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        String cadenaFinal = "";
-        for (int i = 1; i <= 10; i++) {
-            
-            cadenaFinal = String.format("%s%d", 
-                    cadenaFinal,i);
+        Scanner entrada = new Scanner(System.in);
+        int numdetablas;
+        int limite;
+        int contador = 1;
+
+        System.out.println("Ingrese una tabla");
+        numdetablas = entrada.nextInt();
+        System.out.println("Ingrese un limite");
+        limite = entrada.nextInt();
+        while (numdetablas <= limite) {
+
+            while (contador <= numdetablas) {
+                contador = contador + 1;
+                System.out.println(numdetablas + "*" + contador + "="
+                        +numdetablas*contador);
+            contador = contador + 1;
+
+            }
         }
-        
-        for (int i = 1; i < 11; i++) {
-            cadenaFinal = String.format("%s%d", 
-                    cadenaFinal,i);
-        }
-        
-        System.out.printf("%s", cadenaFinal);
 
     }
 
