@@ -5,8 +5,7 @@
  */
 package Paquete04;
 
-import paquete01.*;
-
+import java.util.Scanner;
 /**
  *
  * @author reroes
@@ -17,20 +16,28 @@ public class Ejemplo01 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        String cadenaFinal = "";
-        for (int i = 1; i <= 10; i++) {
-            
-            cadenaFinal = String.format("%s%d", 
-                    cadenaFinal,i);
-        }
+        Scanner entrada = new Scanner(System.in);
         
-        for (int i = 1; i < 11; i++) {
-            cadenaFinal = String.format("%s%d", 
-                    cadenaFinal,i);
-        }
-        
-        System.out.printf("%s", cadenaFinal);
+       int numero_de_tablas;
+       int limite; 
+       int contador = 1;
+       int inicio = 1;
+       
+       System.out.print("Ingrese el numero de tablas de multiplicar a crear, desde 1: ");
+       numero_de_tablas = entrada.nextInt();
+       System.out.print("Ingrese el limite de cada tabla: ");
+       limite = entrada.nextInt();
+       
+       while (inicio<=numero_de_tablas){
+           while (contador <= limite) { 
+               System.out.println(inicio + "*" + contador + "=" + inicio*contador );
+               contador = contador + 1;
+           }
+           contador = 1;
+           inicio = inicio + 1;
+       }
 
+       
     }
 
 }
