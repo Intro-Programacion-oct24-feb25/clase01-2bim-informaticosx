@@ -20,7 +20,7 @@ public class Ejemplo011 {
             System.out.printf("%dKENNY ", i);
             System.out.printf("%d\n", i);
             System.out.printf("presentarcoit");
-            System.out.printf("HolaMichael");
+            System.out.printf("HOLA KENNNYYYYY");
            
             
         }
